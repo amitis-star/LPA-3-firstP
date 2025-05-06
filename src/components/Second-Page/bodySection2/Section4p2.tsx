@@ -25,10 +25,26 @@ const Section4p2 = () => {
               type="text"
             />
           </div>
+          <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300">
+            <input
+              dir="rtl"
+              className="outline-none w-full"
+              placeholder="نام خانوادگی (Persian Last Name)"
+              type="text"
+            />
+          </div>
+          <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300">
+            <input
+              dir="rtl"
+              className="outline-none w-full"
+              placeholder="نام (Persian First Name)"
+              type="text"
+            />
+          </div>
 
           <GenderDropdown />
 
-          <NumericInput/>
+          <NumericInput />
 
           <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300">
             <input
