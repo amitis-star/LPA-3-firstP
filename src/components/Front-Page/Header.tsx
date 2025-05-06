@@ -25,7 +25,7 @@ const Header = () => {
           <div
             className={`
     fixed z-50 bg-white p-6
-    w-[820px] lg:w-[436px] lg:h-screen
+    w-full lg:w-[436px] lg:h-screen
     bottom-0 lg:top-0
     left-1/2 lg:left-0
     transform -translate-x-1/2 lg:translate-x-0
@@ -81,8 +81,8 @@ const Header = () => {
           <button onClick={() => setIsMenuOpen(true)}>
             <Hamburger className="text-white" />
           </button>
-          <span className="w-8 h-8 bg-1986-Shade-2 rounded-1 text-center flex justify-center items-center border border-solid border-1986-Tint-2 text-white rounded-md">
-            FA
+          <span className="w-8 h-8 bg-1986-Shade-2 rounded-1 text-center flex justify-center items-center border border-solid border-1986-Tint-2 text-white rounded-md cursor-pointer">
+            EN
           </span>
         </div>
         <Link to="/">
