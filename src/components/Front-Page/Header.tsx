@@ -44,13 +44,13 @@ const Header = () => {
             </button>
 
             <div className="flex flex-col items-center justify-start gap-4 h-full pt-16">
-              <Link to="SecondPage">
+              <Link to="/SecondPage">
                 <div className="w-46 h-14 bg-green-1986 text-white rounded-lg flex items-center px-4 gap-7 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)] cursor-pointer">
                   <ExamRegistration className="w-8 h-8 text-white" />
                   <p className="text-18 font-700">User Info</p>
                 </div>
               </Link>
-              <Link to="ThirdPage">
+              <Link to="/ThirdPage">
                 <div className="w-46 h-14 bg-green-1986 text-white rounded-lg flex items-center px-4 gap-7 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)]">
                   <IntroductionOfTheTest className="w-8 h-8 text-white" />
                   <p className="text-18 font-700">User Job</p>
@@ -88,7 +88,7 @@ const Header = () => {
         <Link to="/">
           <span className="text-18 font-700 text-white">LPA</span>
         </Link>
-        <div className="bg-white rounded-1 flex justify-center items-center w-8 h-8 rounded-md">
+        <div className="bg-white rounded-1 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer">
           <Profile />
         </div>
       </div>
