@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/amitis-star/LPA-3-firstP/static/css/main.187d131f.css",
+    "main.js": "/amitis-star/LPA-3-firstP/static/js/main.6548cb32.js",
+    "index.html": "/amitis-star/LPA-3-firstP/index.html",
+    "main.187d131f.css.map": "/amitis-star/LPA-3-firstP/static/css/main.187d131f.css.map",
+    "main.6548cb32.js.map": "/amitis-star/LPA-3-firstP/static/js/main.6548cb32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.187d131f.css",
+    "static/js/main.6548cb32.js"
+  ]
+}
