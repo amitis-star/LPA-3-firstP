@@ -18,7 +18,7 @@ const Header = () => {
       {isMenuOpen && (
         <>
           <div
-            className="fixed inset-0 bg-gray-800 bg-opacity-70 z-40"
+            className="fixed top-00 left-00 w-full h-full bg-gray-800 bg-opacity-70 z-40"
             onClick={() => setIsMenuOpen(false)}
           />
 
@@ -81,7 +81,7 @@ const Header = () => {
           <button onClick={() => setIsMenuOpen(true)}>
             <Hamburger className="text-white" />
           </button>
-          <span className="w-8 h-8 bg-1986-Shade-2 rounded-1 text-center flex justify-center items-center border border-solid border-1986-Tint-2 text-white rounded-md cursor-pointer">
+          <span className="w-8 h-8 bg-green-1986-Shade-2 rounded-1 text-center flex justify-center items-center border border-solid border-1986-Tint-2 text-white rounded-md cursor-pointer">
             EN
           </span>
         </div>
