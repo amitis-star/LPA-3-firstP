@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LPA-3-firstP/static/css/main.dae1844a.css",
+    "main.js": "/LPA-3-firstP/static/js/main.6019617b.js",
+    "index.html": "/LPA-3-firstP/index.html",
+    "main.dae1844a.css.map": "/LPA-3-firstP/static/css/main.dae1844a.css.map",
+    "main.6019617b.js.map": "/LPA-3-firstP/static/js/main.6019617b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dae1844a.css",
+    "static/js/main.6019617b.js"
+  ]
+}
