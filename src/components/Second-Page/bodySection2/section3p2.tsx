@@ -41,6 +41,11 @@ const Section3p2 = () => {
         Completion of personal information
       </span>
 
+      <div className="hidden md:flex lg:hidden w-full h-20.5 border border-gray-400 rounded-lg mt-8 flex-col justify-center items-center gap-2">
+        <p className="text-16 font-700">language proficiency level 6</p>
+        <p className="text-14 font-400">Valid until 2025 September 17</p>
+      </div>
+
       <div className="flex justify-start gap-4 mt-8 items-end flex-flow flex-wrap">
         <div
           className="w-16.5 h-22 rounded-lg flex justify-center items-center border border-gray-400 overflow-hidden cursor-pointer"
@@ -89,7 +94,6 @@ const Section3p2 = () => {
           className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 w-full h-full top-00 left-00 bottom-00 right-00"
           onClick={closeModal}
         >
-
           <div
             className="bg-white w-[304px] h-[478px] rounded-lg flex flex-col justify-between shadow-[0px_1px_4px_0px_rgba(33,36,39,0.04)]"
             onClick={(e) => e.stopPropagation()}
@@ -114,7 +118,6 @@ const Section3p2 = () => {
               </button>
             </div>
           </div>
-          
         </div>
       )}
     </div>

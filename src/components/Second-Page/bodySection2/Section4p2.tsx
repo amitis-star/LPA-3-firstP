@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../assets/style/index.css";
 import GenderDropdown from "./GenderDropdown";
 import EmailInput from "./EmailInput";

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../assets/style/index.css";
 import Hamburger from "../../assets/icons/hamburgerMenu";
@@ -13,26 +12,24 @@ import LocationIcon from "../../assets/icons/location";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       {isMenuOpen && (
         <>
           <div
-            className="fixed top-00 left-00 w-full h-full bg-gray-800 bg-opacity-70 z-40"
+            className="fixed top-00 left-00 right-00 w-full h-full bg-gray-800 bg-opacity-70 z-40"
             onClick={() => setIsMenuOpen(false)}
           />
 
           <div
             className={`
-    fixed z-50 bg-white p-6
-    w-full lg:w-[436px] lg:h-screen
-    bottom-0 lg:top-0
-    left-1/2 lg:left-0
-    transform -translate-x-1/2 lg:translate-x-0
-    sm:h-[560px]  
-    md:h-[720px]  
-    ${isMenuOpen ? "md:delay-0 delay-300" : ""}
-  `}
+              fixed z-50 bg-white p-6 w-full lg:w-[436px] lg:h-screen 
+              bottom-0 lg:top-0 left-1/2 lg:left-0 transform 
+              -translate-x-1/2 lg:translate-x-0 
+              sm:h-[560px] md:h-[720px] 
+              ${isMenuOpen ? "md:delay-0 delay-300" : ""}
+            `}
           >
             <div className="sm:hidden w-[200px] h-[8px] bg-green-500 absolute top-0 left-1/2 transform -translate-x-1/2 rounded-lg"></div>
 
@@ -76,8 +73,9 @@ const Header = () => {
           </div>
         </>
       )}
+
       <div className="bg-green-1986 p-3 h-14 rounded-lg flex justify-between gap-2.5 m-4 mb-8 shadow-[0_8px_12px_0_rgba(33,36,39,0.12)]">
-        <div className="flex gap-4">
+        <div className="flex gap-4 w-20">
           <button onClick={() => setIsMenuOpen(true)}>
             <Hamburger className="text-white" />
           </button>
@@ -85,11 +83,15 @@ const Header = () => {
             EN
           </span>
         </div>
+
         <Link to="/">
           <span className="text-18 font-700 text-white">LPA</span>
         </Link>
-        <div className="bg-white rounded-1 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer">
-          <Profile />
+
+        <div className="w-12 flex justify-end">
+          <div className="bg-white rounded-1 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer">
+            <Profile />
+          </div>
         </div>
       </div>
     </>

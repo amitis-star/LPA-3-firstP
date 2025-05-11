@@ -27,6 +27,7 @@ const Section2p2 = () => {
           </div>
         </div>
       </div>
+     
     </>
   );
 };
