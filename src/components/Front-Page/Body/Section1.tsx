@@ -17,7 +17,7 @@ const Section1 = () => {
               <IntroductionOfTheTest />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Introduction of the test
+              Sign Up
             </span>
           </div>
 
@@ -26,7 +26,7 @@ const Section1 = () => {
               <ExamRegistration />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Exam Registration
+              Introduction
             </span>
           </div>
 
@@ -35,7 +35,7 @@ const Section1 = () => {
               <CommonQuestions />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Common Questions
+              Q & A
             </span>
           </div>
 
@@ -43,7 +43,7 @@ const Section1 = () => {
             <div className="w-18 h-18 flex justify-center items-center rounded-lg shadow-[0_2px_8px_0_rgb(33,36,39,0.12)]">
               <NoticeIcon />
             </div>
-            <span className="h-4 text-center text-10 font-400">Notices</span>
+            <span className="h-4 text-center text-10 font-400">Announce</span>
           </div>
         </div>
         <div className="grid grid-cols-4 gap-6">
@@ -51,7 +51,7 @@ const Section1 = () => {
             <div className="w-18 h-18 flex justify-center items-center rounded-lg shadow-[0_2px_8px_0_rgb(33,36,39,0.12)]">
               <LocationIcon />
             </div>
-            <span className="h-4 text-center text-10 font-400">Location</span>
+            <span className="h-4 text-center text-10 font-400">Address</span>
           </div>
 
           <div className="w-18 h-23 flex flex-col items-center gap-1 cursor-pointer">
@@ -59,7 +59,7 @@ const Section1 = () => {
               <ExamRegulation />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Exam regulations
+              Regulations
             </span>
           </div>
 
@@ -68,7 +68,7 @@ const Section1 = () => {
               <IntroductionOfTheTest />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Introduction of the test
+              Introduction
             </span>
           </div>
 
@@ -77,7 +77,7 @@ const Section1 = () => {
               <ExamRegistration />
             </div>
             <span className="h-4 text-center text-10 font-400">
-              Exam Registration
+              Sign UP
             </span>
           </div>
         </div>

@@ -1,20 +1,45 @@
 import React, { useState } from "react";
 import "../../../assets/style/index.css";
 import PlusIcon from "../../../assets/icons/plus";
-import Calendar from "../../../assets/icons/calender";
 import JobTitleDropdown from "./JobTItleDropdown";
 import DeleteIcon from "../../../assets/icons/delete";
+import DatePicker from "./DatePicker";
 
 const Section2p3 = () => {
-  const [jobSections, setJobSections] = useState([{ id: Date.now().toString() }]);
+  const [jobSections, setJobSections] = useState([
+    { id: Date.now().toString() },
+  ]);
+
+  const [dates, setDates] = useState<{
+    [key: string]: { issuedDate?: Date; validityDate?: Date };
+  }>({});
 
   const addJobSection = () => {
-    const newId = Date.now().toString() + Math.random(); // Unique enough for UI
+    const newId = Date.now().toString() + Math.random();
     setJobSections((prev) => [...prev, { id: newId }]);
   };
 
   const deleteJobSection = (id: string) => {
     setJobSections((prev) => prev.filter((section) => section.id !== id));
+    setDates((prevDates) => {
+      const newDates = { ...prevDates };
+      delete newDates[id];
+      return newDates;
+    });
+  };
+
+  const handleDateChange = (
+    id: string,
+    type: "issuedDate" | "validityDate",
+    date: Date | undefined
+  ) => {
+    setDates((prevDates) => ({
+      ...prevDates,
+      [id]: {
+        ...prevDates[id],
+        [type]: date,
+      },
+    }));
   };
 
   return (
@@ -72,8 +97,17 @@ const Section2p3 = () => {
                 className="outline-none w-full"
                 placeholder="Issued Date"
                 type="text"
+                value={
+                  dates[section.id]?.issuedDate?.toLocaleDateString() || ""
+                }
+                readOnly
               />
-              <Calendar />
+              <DatePicker
+                selectedDate={dates[section.id]?.issuedDate}
+                onDateChange={(date) =>
+                  handleDateChange(section.id, "issuedDate", date)
+                }
+              />
             </div>
 
             <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300 flex justify-between items-center">
@@ -81,8 +115,17 @@ const Section2p3 = () => {
                 className="outline-none w-full"
                 placeholder="Validity Date of the Certificate"
                 type="text"
+                value={
+                  dates[section.id]?.validityDate?.toLocaleDateString() || ""
+                }
+                readOnly
               />
-              <Calendar />
+              <DatePicker
+                selectedDate={dates[section.id]?.validityDate}
+                onDateChange={(date) =>
+                  handleDateChange(section.id, "validityDate", date)
+                }
+              />
             </div>
           </div>
         </div>
