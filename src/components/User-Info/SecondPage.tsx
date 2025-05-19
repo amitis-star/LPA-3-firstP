@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/style/index.css";
-import Header from "../Front-Page/Header";
+import Header from "../../Header";
 import Section2p2 from "./bodySection2/Section2p2";
 import Section3p2 from "./bodySection2/section3p2";
 import Section4p2 from "./bodySection2/Section4p2";

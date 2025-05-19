@@ -11,7 +11,7 @@ const Section3p3: React.FC = () => {
   ]);
 
   const handlePlusIconClick = () => {
-    const newId = Date.now().toString() + Math.random();
+    const newId = Date.now().toString();
     setSections((prev) => [...prev, { id: newId }]);
   };
 

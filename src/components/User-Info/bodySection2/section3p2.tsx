@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "../../../assets/style/index.css";
 import Camera from "../../../assets/icons/camera";
 
 const Section3p2 = () => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [fileInfo, setFileInfo] = useState<{
     name: string;
@@ -21,10 +20,6 @@ const Section3p2 = () => {
       };
       reader.readAsDataURL(file);
     }
-  };
-
-  const handleButtonClick = () => {
-    fileInputRef.current?.click();
   };
 
   const handleImageClick = () => {
@@ -61,37 +56,39 @@ const Section3p2 = () => {
             <Camera className="text-gray-400" />
           )}
         </div>
+
         <div className="flex flex-col gap-1">
           {fileInfo && (
             <p className="text-12 break-all">
-              <span className="text-black font-500">File:</span>
+              <span className="text-black font-500">File:</span>{" "}
               <span className="text-gray-500">{fileInfo.name}</span>
             </p>
           )}
-          <button
-            className="py-2.5 px-4 bg-green-1986 rounded-lg text-white w-[245px]"
-            onClick={handleButtonClick}
-          >
-            {selectedImage ? "Change 3x4 photo" : "Select 3x4 photo"}
-          </button>
+
+          <div className="relative w-[245px]">
+            <button className="py-2.5 px-4 bg-green-1986 rounded-lg text-white w-full">
+              {selectedImage ? "Change 3x4 photo" : "Select 3x4 photo"}
+            </button>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+              className="absolute top-00 left-00 w-full h-full opacity-0 cursor-pointer"
+            />
+          </div>
         </div>
-        <input
-          type="file"
-          accept="image/*"
-          ref={fileInputRef}
-          onChange={handleFileChange}
-          className="hidden"
-        />
       </div>
+
       <div className="flex justify-start items-center gap-1 mt-2">
         <div className="w-2 h-2 bg-orange-vivid_Tangelo rounded-full"></div>
         <p className="text-10 font-400 text-orange-vivid_Tangelo">
           A 3×4 cm formal photo shall be uploaded.
         </p>
       </div>
+
       {isModalOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 w-full h-full top-00 left-00 bottom-00 right-00"
+          className="fixed inset-00 bg-black bg-opacity-70 flex justify-center items-center z-50 w-full h-full top-00 left-00 bottom-00 right-00"
           onClick={closeModal}
         >
           <div
@@ -107,9 +104,7 @@ const Section3p2 = () => {
                 />
               )}
             </div>
-
             <div className="px-4 pb-4">
-              {" "}
               <button
                 className="w-full py-2 bg-green-1986 text-white rounded-lg"
                 onClick={closeModal}

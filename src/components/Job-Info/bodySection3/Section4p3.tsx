@@ -7,7 +7,7 @@ const Section4p3 = () => {
     <>
       <div className="mt-8 flex justify-center items-center gap-6 w-full">
         <Link to="/SecondPage" className="w-full sm:w-1/4">
-          <button className="w-full h-12 bg-white rounded-lg border text-center text-18 font-400 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)]">
+          <button className="w-full h-12 bg-white rounded-lg border text-center text-18 font-400 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)] text-gray-400">
             Return
           </button>
         </Link>

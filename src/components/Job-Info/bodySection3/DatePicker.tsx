@@ -19,12 +19,12 @@ const DatePicker = ({ selectedDate, onDateChange }: DatePickerProps) => {
 
       {showPicker && (
         <div
-          className="fixed inset-0 bg-black/30 z-50 flex items-center justify-center w-full h-full top-00 left-00 bottom-00 right-00"
+          className="fixed inset-00 bg-black/30 z-50 flex items-center justify-center w-full h-full top-00 left-00 bottom-00 right-00"
           onClick={() => setShowPicker(false)}
         >
           <div
-            onClick={(e) => e.stopPropagation()}
             className="bg-white p-4 rounded-xl shadow-xl border border-green-1986-Tint-2"
+            onClick={(e) => e.stopPropagation()}
           >
             <DayPicker
               mode="single"

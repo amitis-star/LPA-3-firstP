@@ -4,6 +4,7 @@ import PlusIcon from "../../../assets/icons/plus";
 import JobTitleDropdown from "./JobTItleDropdown";
 import DeleteIcon from "../../../assets/icons/delete";
 import DatePicker from "./DatePicker";
+import CertificateNumber from "./CertificateNumber";
 
 const Section2p3 = () => {
   const [jobSections, setJobSections] = useState([
@@ -15,7 +16,7 @@ const Section2p3 = () => {
   }>({});
 
   const addJobSection = () => {
-    const newId = Date.now().toString() + Math.random();
+    const newId = Date.now().toString();
     setJobSections((prev) => [...prev, { id: newId }]);
   };
 
@@ -84,13 +85,7 @@ const Section2p3 = () => {
               />
             </div>
 
-            <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300">
-              <input
-                className="outline-none w-full"
-                placeholder="Certificate Number"
-                type="text"
-              />
-            </div>
+            <CertificateNumber />
 
             <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300 flex justify-between items-center">
               <input

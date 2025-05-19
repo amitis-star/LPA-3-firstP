@@ -10,14 +10,15 @@ interface TextCardProps {
 
 const TextCard: React.FC<TextCardProps> = ({ title, description, date }) => {
   return (
-    <div className="rounded-lg shadow-[0_2px_8px_0_rgb(33,36,39,0.12)] px-4 py-3.5">
-      <div className="flex justify-start gap-2 items-center mb-3.5">
+    <div className="w-full max-w-[360px] rounded-lg shadow-[0_2px_8px_0_rgb(33,36,39,0.12)] px-3 py-3.5 mx-auto h-[298px] flex flex-col justify-between">
+      <div >
+        <div className="flex justify-start gap-3  items-center mb-3.5 border-b-gray-line border-b-2 pb-2">
         <GreenCircleIcon />
         <p className="text-16 font-700">{title}</p>
       </div>
-      <div className="h-0.1 bg-gray-line mb-2.5"></div>
-      <div className="h-[163px] mb-4">
-        <p className="w-[328px]">{description}</p>
+      <div className=" mb-4">
+        <p className="">{description}</p>
+      </div>
       </div>
       <div className="flex">
         <span className="my-2.5 mx-auto text-14 font-300 text-gray-100">

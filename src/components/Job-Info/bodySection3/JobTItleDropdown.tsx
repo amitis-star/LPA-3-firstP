@@ -41,7 +41,7 @@ const JobTitleDropdown = () => {
     "Project Coordinator",
     "Security Analyst",
     "IT Support",
-    "Business Analyst"
+    "Business Analyst",
   ];
 
   return (
