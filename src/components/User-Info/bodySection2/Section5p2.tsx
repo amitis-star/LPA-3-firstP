@@ -1,7 +1,11 @@
 import React from "react";
-import "../../../assets/style/index.css";
 
-const Section5p2 = () => {
+type Section5p2Props = {
+  onReturn: () => void;
+  onSubmit: () => void;
+};
+
+const Section5p2 = ({ onReturn, onSubmit }: Section5p2Props) => {
   return (
     <>
       <div className="flex justify-center items-center">
@@ -15,6 +19,22 @@ const Section5p2 = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="mt-8 flex justify-center items-center gap-6 w-full">
+        <button
+          onClick={onReturn}
+          type="button"
+          className="w-full sm:w-1/4 h-12 bg-white rounded-lg border text-center text-18 font-400 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)] text-gray-400"
+        >
+          Return
+        </button>
+        <button
+          onClick={onSubmit}
+          type="button"
+          className="w-full sm:w-3/4 h-12 bg-green-1986 rounded-lg border text-center text-white text-18 font-400 shadow-[0_2px_8px_0_rgb(33,36,39,0.12)]"
+        >
+          Next
+        </button>
       </div>
     </>
   );

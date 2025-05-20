@@ -4,15 +4,16 @@ import PlusIcon from "../../../assets/icons/plus";
 import JobTitleDropdown from "./JobTItleDropdown";
 import DeleteIcon from "../../../assets/icons/delete";
 import DatePicker from "./DatePicker";
-import CertificateNumber from "./CertificateNumber";
 
 const Section2p3 = () => {
-  const [jobSections, setJobSections] = useState([
-    { id: Date.now().toString() },
-  ]);
+  const [jobSections, setJobSections] = useState([{ id: Date.now().toString() }]);
 
   const [dates, setDates] = useState<{
     [key: string]: { issuedDate?: Date; validityDate?: Date };
+  }>({});
+
+  const [certificateNumbers, setCertificateNumbers] = useState<{
+    [key: string]: string;
   }>({});
 
   const addJobSection = () => {
@@ -27,6 +28,11 @@ const Section2p3 = () => {
       delete newDates[id];
       return newDates;
     });
+    setCertificateNumbers((prev) => {
+      const updated = { ...prev };
+      delete updated[id];
+      return updated;
+    });
   };
 
   const handleDateChange = (
@@ -40,6 +46,17 @@ const Section2p3 = () => {
         ...prevDates[id],
         [type]: date,
       },
+    }));
+  };
+
+  const handleCertificateChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    id: string
+  ) => {
+    const numericValue = e.target.value.replace(/\D/g, "");
+    setCertificateNumbers((prev) => ({
+      ...prev,
+      [id]: numericValue,
     }));
   };
 
@@ -85,7 +102,16 @@ const Section2p3 = () => {
               />
             </div>
 
-            <CertificateNumber />
+            <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300">
+              <input
+                className="outline-none w-full"
+                placeholder="Certificate Number"
+                type="text"
+                value={certificateNumbers[section.id] || ""}
+                onChange={(e) => handleCertificateChange(e, section.id)}
+                inputMode="numeric"
+              />
+            </div>
 
             <div className="w-full h-12 rounded-lg shadow-[0_1px_4px_0_rgb(33,36,39,0.04)] px-4 py-[13px] border border-gray-300 flex justify-between items-center">
               <input

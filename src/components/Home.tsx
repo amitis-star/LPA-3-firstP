@@ -5,7 +5,7 @@ import "../assets/style/index.css";
 import Header from "../Header";
 import Section1 from "./Home-Page/Body/Section1";
 import BodyFrontPage from "./Home-Page/Body/BodyFrontPage";
-import StepCircle from "../assets/icons/StepCircle";
+import StepCircle from "../StepCircle";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
      <Header/>
      <Section1/>
      <BodyFrontPage/>
-     <StepCircle currentStep={1} />
+     <StepCircle current={3} />
     </>
   );
 };
